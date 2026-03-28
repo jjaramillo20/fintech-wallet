@@ -2,7 +2,7 @@ package com.fintech.wallet.service;
 
 import com.fintech.wallet.dto.UserRegistrationRequest;
 import com.fintech.wallet.dto.UserResponse;
-import com.fintech.wallet.exception.UserAlreadyExistsException;
+import com.fintech.wallet.exception.exceptions.UserAlreadyExistsException;
 import com.fintech.wallet.mapping.UserMapper;
 import com.fintech.wallet.model.entity.Currency;
 import com.fintech.wallet.model.entity.User;
