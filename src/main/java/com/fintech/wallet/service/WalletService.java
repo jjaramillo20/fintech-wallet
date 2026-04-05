@@ -2,7 +2,7 @@ package com.fintech.wallet.service;
 
 import com.fintech.wallet.dto.CashInRequest;
 import com.fintech.wallet.dto.WalletResponse;
-import com.fintech.wallet.exception.WalletNotExistsException;
+import com.fintech.wallet.exception.exceptions.WalletNotExistsException;
 import com.fintech.wallet.mapping.WalletMapper;
 import com.fintech.wallet.model.entity.Wallet;
 import com.fintech.wallet.repository.WalletRepository;
