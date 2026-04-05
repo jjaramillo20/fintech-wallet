@@ -4,7 +4,7 @@ REST API for digital wallet management, built with Java and Spring Boot.
 
 ## 🚀 Tech Stack
 
-- **Java 21** + **Spring Boot 3**
+- **Java 21** + **Spring Boot 4**
 - **PostgreSQL** — relational database
 - **Flyway** — database migrations
 - **Docker Compose** — local environment setup
@@ -17,6 +17,16 @@ REST API for digital wallet management, built with Java and Spring Boot.
 - Wallet creation per user with multi-currency support
 - Cash-in (deposit) operations
 - Encrypted sensitive data
+
+## 🗺️ Roadmap (Upcoming Features)
+
+This project is under active development. The following features are planned for upcoming releases to simulate a complete, production-ready financial ecosystem:
+
+- [ ] **Transaction Ledger (Audit Trail):** Immutable append-only log of all financial events (deposits, withdrawals, transfers) for strict auditing.
+- [ ] **P2P Transfers:** Atomic transactions to send money between user wallets safely, preventing deadlocks and race conditions.
+- [ ] **Withdrawals (Cash-Out):** Secure endpoint to deduct funds with balance validations.
+- [ ] **Security & Authentication:** Integration with Spring Security and JWT for route protection and identity verification.
+- [ ] **Foreign Exchange (FX):** Real-time currency conversion (e.g., MXN to USD) integrating an external HTTP client/API.
 
 ## ▶️ Getting Started
 
