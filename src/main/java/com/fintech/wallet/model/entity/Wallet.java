@@ -3,6 +3,7 @@ package com.fintech.wallet.model.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Digits;
+import org.hibernate.Hibernate;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -88,9 +89,9 @@ public class Wallet {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Wallet)) return false;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
         Wallet other = (Wallet) o;
-        return getId() != null && getId().equals(other.getId());
+        return id != null && id.equals(other.id);
     }
 
     @Override

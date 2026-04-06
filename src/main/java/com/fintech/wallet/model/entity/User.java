@@ -2,6 +2,7 @@ package com.fintech.wallet.model.entity;
 
 
 import jakarta.persistence.*;
+import org.hibernate.Hibernate;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -97,9 +98,9 @@ public class User {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof User)) return false;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
         User other = (User) o;
-        return getId() != null && getId().equals(other.getId());
+        return id != null && id.equals(other.getId());
     }
 
     @Override
