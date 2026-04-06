@@ -1,7 +1,10 @@
 package com.fintech.wallet.model.entity;
 
 import jakarta.persistence.*;
+<<<<<<< HEAD
 import org.hibernate.Hibernate;
+=======
+>>>>>>> origin/main
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.math.BigDecimal;
