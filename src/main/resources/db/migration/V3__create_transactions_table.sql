@@ -1,0 +1,9 @@
+CREATE TABLE transactions (
+id UUID PRIMARY KEY,
+wallet_id UUID NOT NULL,
+type VARCHAR(50) NOT NULL,
+amount NUMERIC(19, 4) NOT NULL,
+balance_after NUMERIC(19, 4) NOT NULL,
+created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+CONSTRAINT fk_transaction_wallet FOREIGN KEY (wallet_id) REFERENCES wallets(id) ON DELETE CASCADE
+);
