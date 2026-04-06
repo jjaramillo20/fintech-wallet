@@ -1,6 +1,7 @@
 package com.fintech.wallet.model.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.Hibernate;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.math.BigDecimal;
@@ -73,7 +74,7 @@ public class Transaction {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
         Transaction that = (Transaction) o;
         return id != null && id.equals(that.id);
     }
